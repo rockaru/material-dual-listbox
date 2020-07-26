@@ -1,6 +1,8 @@
-
-on: push
-name: Build
+on: 
+  push:
+    tags:
+      - 'v*'
+name: Publish to npm
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,3 +28,17 @@ jobs:
         run: |
           npm i
           npm run build
+  
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish dist/material-dual-listbox
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
