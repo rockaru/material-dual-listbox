@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve demo",
     "build": "ng build material-dual-listbox --prod",
+    "demo": "ng build demo --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish": "npm publish dist/material-dual-listbox"
+    "publish": "npm publish dist/material-dual-listbox",
+    "patch": "npm version patch dist/material-dual-listbox"
   },
   "dependencies": {
     "@angular/animations": "~10.0.0",
@@ -21,6 +23,7 @@
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "material-dual-listbox": "^2.0.12",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

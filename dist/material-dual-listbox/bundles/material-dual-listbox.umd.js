@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/drag-drop'), require('@angular/material/input'), require('@angular/material/icon'), require('@angular/material/list'), require('@angular/platform-browser'), require('@angular/forms'), require('@angular/material/form-field')) :
-    typeof define === 'function' && define.amd ? define('material-dual-listbox', ['exports', '@angular/core', '@angular/cdk/drag-drop', '@angular/material/input', '@angular/material/icon', '@angular/material/list', '@angular/platform-browser', '@angular/forms', '@angular/material/form-field'], factory) :
-    (global = global || self, factory(global['material-dual-listbox'] = {}, global.ng.core, global.ng.cdk.dragDrop, global.ng.material.input, global.ng.material.icon, global.ng.material.list, global.ng.platformBrowser, global.ng.forms, global.ng.material.formField));
-}(this, (function (exports, core, dragDrop, input, icon, list, platformBrowser, forms, formField) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/drag-drop'), require('@angular/platform-browser'), require('@angular/material/input'), require('@angular/material/icon'), require('@angular/material/list'), require('@angular/forms'), require('@angular/material/form-field')) :
+    typeof define === 'function' && define.amd ? define('material-dual-listbox', ['exports', '@angular/core', '@angular/cdk/drag-drop', '@angular/platform-browser', '@angular/material/input', '@angular/material/icon', '@angular/material/list', '@angular/forms', '@angular/material/form-field'], factory) :
+    (global = global || self, factory(global['material-dual-listbox'] = {}, global.ng.core, global.ng.cdk.dragDrop, global.ng.platformBrowser, global.ng.material.input, global.ng.material.icon, global.ng.material.list, global.ng.forms, global.ng.material.formField));
+}(this, (function (exports, core, dragDrop, platformBrowser, input, icon, list, forms, formField) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation.
