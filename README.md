@@ -1,71 +1,27 @@
-# MeaMaterialDualListbox
+# Workspace
 
-Simple dual list box component to use with your Angular app, along with Angular Material.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
-## Dependencies
-You will need:
+## Development server
 
-- Angular ^10
-- Angular Material ^10
-- Angular cdk ^10
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Instalation
+## Code scaffolding
 
-To install this library, run:
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```
-$ npm install material-dual-listbox --save
-```
+## Build
 
-and then from your Angular AppModule:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-```
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+## Running unit tests
 
-import { AppComponent } from './app.component';
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-// Import the module
-import { MaterialDualListboxModule } from '@rockaru/mea-material-dual-listbox';
+## Running end-to-end tests
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-    // Add the module in the impots
-    MaterialDualListboxModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
+## Further help
 
-Once the library is imported, you can use the component in your Angular application:
-
-```
-<material-dual-listbox [source]="items" [(destination)]="'itemsDestination'">
-</material-dual-listbox>
-```
-
-## Attributes
-
-- **source** - The source array of objects
-- **destination** - The destination array of objects
-- **(destinationChange)** - An event triggered when the destination array changes.
-- **key** - The unique identifier field of each object in the source and destination arrays, default is `_id`.
-- **display** - The field of each object in the source and destination arrays, default is  `name`.
-- **width** - The width of the component, default is `360px`
-- **filter** - A boolean whether or not to display a filter for the lists, default is `true`.
-- **searchPlaceholder** - filter placeholder, default is `Filter`
-- **header** - A boolean whether or not to display a header for the lists, default is `false`
-- **itemsTitle** - The title of the source array, default is `Items`
-- **itemsSelectedTitle** - The title of the destination array, default is `Selected Items`
-- **showIcons** - A boolean wheter or not to display icons for the lists, default is `true`
-- **addIcon** - The material icon for the source array, default is `add`
-- **removeIcon** - The material icon for the destination array, default is `delete`
-- **addIconColor** - The color for the material icon of the source array, default is `black`
-- **removeIconColor** - The color for the material icon of the destination array, default is `black`
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

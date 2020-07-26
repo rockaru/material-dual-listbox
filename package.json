@@ -1,39 +1,50 @@
 {
-  "name": "material-dual-listbox",
-  "version": "2.0.8",
-  "description": "Simple dual listbox component to use with your Angular 10 App with Angular Material and CDK Drag and Drop.",
-  "homepage": "https://github.com/rockaru/material-dual-listbox/blob/master/README.md",
-  "bugs": {
-    "url": "https://github.com/rockaru/material-dual-listbox/issues",
-    "email": "vlad@rockaru.ro"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Vlad Preda",
-    "email": "vlad@rockaru.ro",
-    "url": "https://rockaru.ro"
-  },
-  "schematics": "./schematics/collection.json",
+  "name": "workspace",
+  "version": "0.0.0",
   "scripts": {
-    "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
-    "copy:schemas": "cp --parents schematics/*/schema.json ../../dist/my-lib/",
-    "copy:files": "cp --parents -p schematics/*/files/** ../../dist/my-lib/",
-    "copy:collection": "cp schematics/collection.json ../../dist/my-lib/schematics/collection.json",
-    "postbuild": "npm run copy:schemas && npm run copy:files && npm run copy:collection"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build material-dual-listbox --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
-  "peerDependencies": {
-    "@angular/common": "^10.0.5",
-    "@angular/core": "^10.0.5",
-    "@angular/material": "^10.1.0",
-    "@angular/cdk": "^10.1.0"
-  },
+  "private": true,
   "dependencies": {
-    "tslib": "^2.0.0"
+    "@angular/animations": "~10.0.0",
+    "@angular/cdk": "^10.1.0",
+    "@angular/common": "~10.0.0",
+    "@angular/compiler": "~10.0.0",
+    "@angular/core": "~10.0.0",
+    "@angular/forms": "~10.0.0",
+    "@angular/material": "^10.1.0",
+    "@angular/platform-browser": "~10.0.0",
+    "@angular/platform-browser-dynamic": "~10.0.0",
+    "@angular/router": "~10.0.0",
+    "rxjs": "~6.5.5",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.3"
   },
-  "keywords": [
-    "material dual listbox",
-    "angular dual listbox",
-    "multi select",
-    "angular material dual listbox"
-  ]
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1000.4",
+    "@angular-devkit/build-ng-packagr": "~0.1000.4",
+    "@angular/cli": "~10.0.0",
+    "@angular/compiler-cli": "~10.0.0",
+    "@types/node": "^12.11.1",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "codelyzer": "^6.0.0-next.1",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~5.0.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~3.3.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^10.0.0",
+    "protractor": "~7.0.0",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~3.9.5"
+  }
 }
