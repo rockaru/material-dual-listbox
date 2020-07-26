@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve demo",
     "build": "ng build material-dual-listbox --prod",
-    "demo": "ng build demo --prod --output-path docs",
+    "demo": "ng build demo --prod --output-path docs --baseHref='https://rockaru.github.io/material-dual-listbox/'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
