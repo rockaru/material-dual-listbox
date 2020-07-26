@@ -7,7 +7,8 @@
     "build": "ng build material-dual-listbox --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "publish": "npm publish dist/material-dual-listbox"
   },
   "dependencies": {
     "@angular/animations": "~10.0.0",
