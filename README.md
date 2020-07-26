@@ -61,7 +61,6 @@ Once the library is imported, you can use the component in your Angular applicat
 - **source** - The source array of objects
 - **destination** - The destination array of objects
 - **(destinationChange)** - An event triggered when the destination array changes.
-- **key** - The unique identifier field of each object in the source and destination arrays, default is `_id`.
 - **display** - The field of each object in the source and destination arrays, default is  `name`.
 - **width** - The width of the component, default is `360px`
 - **filter** - A boolean whether or not to display a filter for the lists, default is `true`.
