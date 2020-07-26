@@ -5,7 +5,7 @@
 
 Simple dual list box component to use with your Angular app, along with Angular Material.
 
-![Demo](https://github.com/rockaru/material-dual-listbox/tree/master/dist/demo)
+![Demo](https://rockaru.github.io/material-dual-listbox/)
 
 ## Dependencies
 You will need:
