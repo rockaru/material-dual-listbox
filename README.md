@@ -5,7 +5,7 @@ Simple dual list box component to use with your Angular app, along with Angular 
 ## Dependencies
 You will need:
 
-- Angular 10
+- Angular ^10
 - Angular Material ^10
 - Angular cdk ^10
 
