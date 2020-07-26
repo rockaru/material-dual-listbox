@@ -1,5 +1,5 @@
 on: push
-name: Build Angular
+name: Build
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,30 +25,15 @@ jobs:
         run: |
           npm i
           npm run build
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: publish gpr
         with:
-          node-version: 12
           registry-url: https://npm.pkg.github.com/
-  
-      - run: npm ci
-      - run: npm run publish
+        run: npm publish dist/material-dual-listbox
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: publish npm
         with:
-          node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm run publish
+        run: npm publish dist/material-dual-listbox
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
