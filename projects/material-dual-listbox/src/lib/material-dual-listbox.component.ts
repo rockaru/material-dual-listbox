@@ -10,7 +10,6 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class MaterialDualListboxComponent implements OnInit {
 
-  @Input() key = '_id';
   @Input() display: any = 'name';
   @Input() width = '360px';
   @Input() filter = true;
