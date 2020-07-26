@@ -1,0 +1,39 @@
+{
+  "name": "material-dual-listbox",
+  "version": "2.0.8",
+  "description": "Simple dual listbox component to use with your Angular 10 App with Angular Material and CDK Drag and Drop.",
+  "homepage": "https://github.com/rockaru/material-dual-listbox/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/rockaru/material-dual-listbox/issues",
+    "email": "vlad@rockaru.ro"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Vlad Preda",
+    "email": "vlad@rockaru.ro",
+    "url": "https://rockaru.ro"
+  },
+  "schematics": "./schematics/collection.json",
+  "scripts": {
+    "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
+    "copy:schemas": "cp --parents schematics/*/schema.json ../../dist/my-lib/",
+    "copy:files": "cp --parents -p schematics/*/files/** ../../dist/my-lib/",
+    "copy:collection": "cp schematics/collection.json ../../dist/my-lib/schematics/collection.json",
+    "postbuild": "npm run copy:schemas && npm run copy:files && npm run copy:collection"
+  },
+  "peerDependencies": {
+    "@angular/common": "^10.0.5",
+    "@angular/core": "^10.0.5",
+    "@angular/material": "^10.1.0",
+    "@angular/cdk": "^10.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "keywords": [
+    "material dual listbox",
+    "angular dual listbox",
+    "multi select",
+    "angular material dual listbox"
+  ]
+}
