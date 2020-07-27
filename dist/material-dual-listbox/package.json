@@ -1,6 +1,6 @@
 {
   "name": "material-dual-listbox",
-  "version": "2.0.13",
+  "version": "2.0.16",
   "description": "Simple dual listbox component to use with your Angular 10 App with Angular Material and CDK Drag and Drop.",
   "homepage": "https://github.com/rockaru/material-dual-listbox/blob/master/README.md",
   "bugs": {
@@ -30,23 +30,11 @@
     "angular material dual listbox"
   ],
   "main": "bundles/material-dual-listbox.umd.js",
-  "module_ivy_ngcc": "__ivy_ngcc__/fesm2015/material-dual-listbox.js",
   "module": "fesm2015/material-dual-listbox.js",
-  "es2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/material-dual-listbox.js",
   "es2015": "fesm2015/material-dual-listbox.js",
   "esm2015": "esm2015/material-dual-listbox.js",
-  "fesm2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/material-dual-listbox.js",
   "fesm2015": "fesm2015/material-dual-listbox.js",
   "typings": "material-dual-listbox.d.ts",
   "metadata": "material-dual-listbox.metadata.json",
-  "sideEffects": false,
-  "__processed_by_ivy_ngcc__": {
-    "es2015": "10.0.5",
-    "fesm2015": "10.0.5",
-    "module": "10.0.5",
-    "typings": "10.0.5"
-  },
-  "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
-  }
+  "sideEffects": false
 }

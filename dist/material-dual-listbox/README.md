@@ -5,6 +5,8 @@
 
 Simple dual list box component to use with your Angular app, along with Angular Material.
 
+If you don't need drag and drop support you can use [this one](https://www.npmjs.com/package/mea-material-dual-listbox) without Angular cdk
+
 [Demo](https://rockaru.github.io/material-dual-listbox/)
 
 ## Dependencies
