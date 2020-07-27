@@ -1,7 +1,7 @@
 ![Build](https://github.com/rockaru/material-dual-listbox/workflows/Build/badge.svg)
 ![Demo](https://github.com/rockaru/material-dual-listbox/workflows/Demo/badge.svg)
 
-# MeaMaterialDualListbox
+# Material Dual Listbox
 
 Simple dual list box component to use with your Angular app, along with Angular Material.
 
