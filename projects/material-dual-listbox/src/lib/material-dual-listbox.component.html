@@ -81,7 +81,7 @@
             </mat-form-field>
             <div cdkDropList [cdkDropListData]="availableFiltered" class="rck-list"
                  (cdkDropListDropped)="drop($event)">
-                <div class="rck-box" *ngFor="let item of availableFiltered" (click)="clickedItem($event.target.innerText,'confirmedFiltered','availableFiltered')" cdkDrag><mat-icon *ngIf="showIcons" [style.color]="addIconColor" fxHide.xs mat-list-icon>{{addIcon}}</mat-icon> {{item[display]}}</div>
+                <div class="rck-box" *ngFor="let item of availableFiltered" (click)="clickedItem(item[display],'confirmedFiltered','availableFiltered')" cdkDrag><mat-icon *ngIf="showIcons" [style.color]="addIconColor" fxHide.xs mat-list-icon>{{addIcon}}</mat-icon> {{item[display]}}</div>
             </div>
 
         </div>
@@ -96,7 +96,7 @@
             </mat-form-field>
             <div cdkDropList [cdkDropListData]="confirmedFiltered" class="rck-list"
                  (cdkDropListDropped)="drop($event)">
-                <div class="rck-box" *ngFor="let item of confirmedFiltered" (click)="clickedItem($event.target.innerText,'availableFiltered','confirmedFiltered')" cdkDrag><mat-icon *ngIf="showIcons" [style.color]="removeIconColor" fxHide.xs mat-list-icon>{{removeIcon}}</mat-icon> {{item[display]}}</div>
+                <div class="rck-box" *ngFor="let item of confirmedFiltered" (click)="clickedItem(item[display],'availableFiltered','confirmedFiltered')" cdkDrag><mat-icon *ngIf="showIcons" [style.color]="removeIconColor" fxHide.xs mat-list-icon>{{removeIcon}}</mat-icon> {{item[display]}}</div>
             </div>
         </div>
         

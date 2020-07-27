@@ -53,9 +53,10 @@ export class MaterialDualListboxComponent implements OnInit {
     }
   }
 
-  clickedItem(item, ...targets: string[]) {
+  clickedItem(item: string[], ...targets: string[]) {
+    
     this[targets[0]] = [
-      ...this[targets[1]].splice(this[targets[1]].indexOf(item), 1),
+      ...this[targets[1]].splice(this[targets[1]].findIndex(x=>x[this.display]==item), 1),
       ...this[targets[0]]
     ]
     this.destination = this.confirmedFiltered
