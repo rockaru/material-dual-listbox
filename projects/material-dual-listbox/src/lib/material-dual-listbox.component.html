@@ -7,7 +7,7 @@
         flex-wrap: nowrap;
     }
     .rck-container {
-        width: 180px;
+        width: 200px;
         max-width: 100%;
         margin: 5px 5px 5px 5px;
         display: inline-block;
@@ -68,17 +68,17 @@
 
 
 <div [ngStyle]="{'max-height': '100%','max-width': width, 'min-width': width }">
+    <mat-form-field appearance="standard"  *ngIf="filter" [ngStyle]="{'max-width': width, 'min-width': width }">
+        <mat-label>{{searchPlaceholder}} {{itemsTitle}}</mat-label>
+        <input matInput [ngModel]="filterText" autocomplete="off"
+        (ngModelChange)="filterItems($event)">
+        <mat-placeholder>{{searchPlaceholder}} {{itemsTitle}}</mat-placeholder>
 
+    </mat-form-field>
     <div cdkDropListGroup class="rck-list-container">
         <div class="rck-container">
             <h3 class="rck-title" *ngIf="header">{{itemsTitle}}</h3>
-            <mat-form-field appearance="standard"  *ngIf="filter">
-                <mat-label>{{searchPlaceholder}} {{itemsTitle}}</mat-label>
-                <input matInput [ngModel]="filterText" autocomplete="off"
-                (ngModelChange)="filterItems($event)">
-                <mat-placeholder>{{searchPlaceholder}} {{itemsTitle}}</mat-placeholder>
-
-            </mat-form-field>
+            
             <div cdkDropList [cdkDropListData]="availableFiltered" class="rck-list"
                  (cdkDropListDropped)="drop($event)">
                 <div class="rck-box" *ngFor="let item of availableFiltered" (click)="clickedItem(item[display],'confirmedFiltered','availableFiltered')" cdkDrag><mat-icon *ngIf="showIcons" [style.color]="addIconColor" fxHide.xs mat-list-icon>{{addIcon}}</mat-icon> {{item[display]}}</div>
@@ -87,16 +87,10 @@
         </div>
         <div class="rck-container">
             <h3 class="rck-title" *ngIf="header">{{selectedItemsTitle}}</h3>
-            <mat-form-field appearance="standard" *ngIf="filter">
-                <mat-label>{{searchPlaceholder}} {{selectedItemsTitle}}</mat-label>
-                <input matInput [ngModel]="filterSelectedText" autocomplete="off"
-                (ngModelChange)="filterSelectedItems($event)"
-                >
-                <mat-placeholder>{{searchPlaceholder}} {{itemsTitle}}</mat-placeholder>
-            </mat-form-field>
-            <div cdkDropList [cdkDropListData]="confirmedFiltered" class="rck-list"
+            
+            <div cdkDropList [cdkDropListData]="destination" class="rck-list"
                  (cdkDropListDropped)="drop($event)">
-                <div class="rck-box" *ngFor="let item of confirmedFiltered" (click)="clickedItem(item[display],'availableFiltered','confirmedFiltered')" cdkDrag><mat-icon *ngIf="showIcons" [style.color]="removeIconColor" fxHide.xs mat-list-icon>{{removeIcon}}</mat-icon> {{item[display]}}</div>
+                <div class="rck-box" *ngFor="let item of destination" (click)="clickedItem(item[display],'availableFiltered','confirmedFiltered')" cdkDrag><mat-icon *ngIf="showIcons" [style.color]="removeIconColor" fxHide.xs mat-list-icon>{{removeIcon}}</mat-icon> {{item[display]}}</div>
             </div>
         </div>
         

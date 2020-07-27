@@ -29,7 +29,6 @@ export class MaterialDualListboxComponent implements OnInit {
   availableFiltered: Array<any> = []
   confirmedFiltered: Array<any> = []
   filterText: string = null
-  filterSelectedText: string = null
 
   constructor() {}
 
@@ -39,7 +38,7 @@ export class MaterialDualListboxComponent implements OnInit {
 
   update() {
     this.filterItems(this.filterText);
-    this.filterSelectedItems(this.filterSelectedText);
+    
   }
 
   drop(event: CdkDragDrop<string[]>) {
@@ -66,21 +65,11 @@ export class MaterialDualListboxComponent implements OnInit {
   filterItems(text: string) {
     this.filterText = text;
     if (!text) {
-      this.availableFiltered = this.source;
+      this.availableFiltered = this.source.filter(n=>!this.destination.includes(n))
       return;
     }
-    this.availableFiltered = this.source
+    this.availableFiltered = this.availableFiltered
       .filter(item => item[this.display].toLowerCase().includes(text.toLowerCase()));
-  }
-
-  filterSelectedItems(text: string) {
-    this.filterSelectedText = text;
-    if (!text) {
-      this.confirmedFiltered = this.destination
-
-      return;
-    }
-    this.confirmedFiltered = this.destination.filter(item => item[this.display].toLowerCase().includes(text.toLowerCase()));
   }
 
 }
