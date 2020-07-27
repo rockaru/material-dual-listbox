@@ -1,5 +1,4 @@
 import { EventEmitter, OnInit } from '@angular/core';
-import { CdkDragDrop } from '@angular/cdk/drag-drop';
 export declare class MaterialDualListboxComponent implements OnInit {
     display: any;
     width: string;
@@ -23,7 +22,6 @@ export declare class MaterialDualListboxComponent implements OnInit {
     constructor();
     ngOnInit(): void;
     update(): void;
-    drop(event: CdkDragDrop<string[]>): void;
     clickedItem(item: string[], ...targets: string[]): void;
     filterItems(text: string): void;
     filterSelectedItems(text: string): void;

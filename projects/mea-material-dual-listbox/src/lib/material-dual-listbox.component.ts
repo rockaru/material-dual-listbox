@@ -1,5 +1,5 @@
-import { Component, Input, EventEmitter, IterableDiffers, Output, OnInit, OnChanges, ɵConsole } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { Component, Input, EventEmitter,  Output, OnInit } from '@angular/core';
+
 
 
 
@@ -31,25 +31,23 @@ export class MaterialDualListboxComponent implements OnInit {
   filterText: string = null
   filterSelectedText: string = null
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit() {
-    this.update()
+    this.availableFiltered=this.source
   }
 
   update() {
-    this.filterItems(this.filterText);
-    this.filterSelectedItems(this.filterSelectedText);
-  }
-
-  drop(event: CdkDragDrop<string[]>) {
-    if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-      console.log(event)
-    } else {
-      transferArrayItem(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
-      this.destination = this.confirmedFiltered
-      this.destinationChange.emit(this.destination);
+    if(!this.filterText){
+      this.availableFiltered = this.source
+    }else{
+      this.availableFiltered = this.availableFiltered.filter(n=>this.destination.includes(n))
+    }
+    if(!this.filterSelectedText){
+      this.confirmedFiltered = this.destination
+    }else{
+      this.confirmedFiltered = this.confirmedFiltered.filter(n=>!this.source.includes(n))
     }
   }
 
@@ -59,28 +57,30 @@ export class MaterialDualListboxComponent implements OnInit {
       ...this[targets[1]].splice(this[targets[1]].findIndex(x=>x[this.display]==item), 1),
       ...this[targets[0]]
     ]
-    this.destination = this.confirmedFiltered
-    this.destinationChange.emit(this.destination);
+    this.update()
+
   }
+
 
   filterItems(text: string) {
     this.filterText = text;
-    if (!text) {
-      this.availableFiltered = this.source;
-      return;
-    }
+    
+    if(!this.filterText){
     this.availableFiltered = this.source
-      .filter(item => item[this.display].toLowerCase().includes(text.toLowerCase()));
+
+      return
+    }
+    this.availableFiltered = this.availableFiltered.filter(item => item[this.display].toLowerCase().includes(text.toLowerCase()));
   }
 
   filterSelectedItems(text: string) {
     this.filterSelectedText = text;
-    if (!text) {
-      this.confirmedFiltered = this.destination
+    if(!this.filterSelectedText){
+    this.confirmedFiltered = this.destination
 
-      return;
+      return
     }
-    this.confirmedFiltered = this.destination.filter(item => item[this.display].toLowerCase().includes(text.toLowerCase()));
+    this.confirmedFiltered = this.confirmedFiltered.filter(item => item[this.display].toLowerCase().includes(text.toLowerCase()));
   }
 
 }

@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
-import { DragDropModule } from '@angular/cdk/drag-drop';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [MaterialDualListboxComponent],
   imports: [
@@ -16,7 +16,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatListModule,
     FormsModule,
     MatFormFieldModule,
-    DragDropModule
+    MatButtonModule
   ],
   exports: [MaterialDualListboxComponent]
 })

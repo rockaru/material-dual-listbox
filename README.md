@@ -1,25 +1,24 @@
-![Build](https://github.com/rockaru/material-dual-listbox/workflows/Build/badge.svg)
-![Demo](https://github.com/rockaru/material-dual-listbox/workflows/Demo/badge.svg)
+![Build](https://github.com/rockaru/mea-material-dual-listbox/workflows/Build/badge.svg)
+![Demo](https://github.com/rockaru/mea-material-dual-listbox/workflows/Demo/badge.svg)
 
-# Material Dual Listbox
+# Mea Material Dual Listbox
 
-Simple dual list box component to use with your Angular app, along with Angular Material.
+Simple dual list box component to use in your Angular app, along with Angular Material.
 
-[Demo](https://rockaru.github.io/material-dual-listbox/)
+[Demo](https://rockaru.github.io/mea-material-dual-listbox/)
 
 ## Dependencies
 You will need:
 
 - Angular ^10
 - Angular Material ^10
-- Angular cdk ^10
 
 ## Instalation
 
 To install this library, run:
 
 ```
-$ npm install material-dual-listbox --save
+$ npm install mea-material-dual-listbox --save
 ```
 
 and then from your Angular AppModule:
@@ -31,7 +30,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import the module
-import { MaterialDualListboxModule } from '@rockaru/mea-material-dual-listbox';
+import { MaterialDualListboxModule } from 'mea-material-dual-listbox';
 
 @NgModule({
   declarations: [
