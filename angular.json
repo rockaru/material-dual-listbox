@@ -3,38 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mea-material-dual-listbox": {
+    "material-dual-listbox": {
       "projectType": "library",
-      "root": "projects/mea-material-dual-listbox",
-      "sourceRoot": "projects/mea-material-dual-listbox/src",
+      "root": "projects/material-dual-listbox",
+      "sourceRoot": "projects/material-dual-listbox/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/mea-material-dual-listbox/tsconfig.lib.json",
-            "project": "projects/mea-material-dual-listbox/ng-package.json"
+            "tsConfig": "projects/material-dual-listbox/tsconfig.lib.json",
+            "project": "projects/material-dual-listbox/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/mea-material-dual-listbox/tsconfig.lib.prod.json"
+              "tsConfig": "projects/material-dual-listbox/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/mea-material-dual-listbox/src/test.ts",
-            "tsConfig": "projects/mea-material-dual-listbox/tsconfig.spec.json",
-            "karmaConfig": "projects/mea-material-dual-listbox/karma.conf.js"
+            "main": "projects/material-dual-listbox/src/test.ts",
+            "tsConfig": "projects/material-dual-listbox/tsconfig.spec.json",
+            "karmaConfig": "projects/material-dual-listbox/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/mea-material-dual-listbox/tsconfig.lib.json",
-              "projects/mea-material-dual-listbox/tsconfig.spec.json"
+              "projects/material-dual-listbox/tsconfig.lib.json",
+              "projects/material-dual-listbox/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

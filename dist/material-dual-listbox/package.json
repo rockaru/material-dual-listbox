@@ -1,6 +1,6 @@
 {
-  "name": "mea-material-dual-listbox",
-  "version": "0.1.2",
+  "name": "material-dual-listbox",
+  "version": "2.0.13",
   "description": "Simple dual listbox component to use with your Angular 10 App with Angular Material and CDK Drag and Drop.",
   "homepage": "https://github.com/rockaru/material-dual-listbox/blob/master/README.md",
   "bugs": {
@@ -29,12 +29,12 @@
     "multi select",
     "angular material dual listbox"
   ],
-  "main": "bundles/mea-material-dual-listbox.umd.js",
-  "module": "fesm2015/mea-material-dual-listbox.js",
-  "es2015": "fesm2015/mea-material-dual-listbox.js",
-  "esm2015": "esm2015/mea-material-dual-listbox.js",
-  "fesm2015": "fesm2015/mea-material-dual-listbox.js",
-  "typings": "mea-material-dual-listbox.d.ts",
-  "metadata": "mea-material-dual-listbox.metadata.json",
+  "main": "bundles/material-dual-listbox.umd.js",
+  "module": "fesm2015/material-dual-listbox.js",
+  "es2015": "fesm2015/material-dual-listbox.js",
+  "esm2015": "esm2015/material-dual-listbox.js",
+  "fesm2015": "fesm2015/material-dual-listbox.js",
+  "typings": "material-dual-listbox.d.ts",
+  "metadata": "material-dual-listbox.metadata.json",
   "sideEffects": false
 }
